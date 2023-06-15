@@ -4,7 +4,7 @@ export interface ModuleName extends OdsBehavior {
   methods: {
     initialize: () => void;
   };
-  attach: (context: HTMLElement | Document | undefined, settings: object) => void;
+  attach: (context?: HTMLElement | Document | undefined, settings?: object) => void;
 }
 
 ((Drupal, drupalSettings) => {
@@ -14,7 +14,7 @@ export interface ModuleName extends OdsBehavior {
         console.log('It works!');
       },
     },
-    attach(context, settings) {
+    attach() {
       moduleName.methods.initialize();
     },
   }
