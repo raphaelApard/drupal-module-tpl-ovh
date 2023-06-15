@@ -1,6 +1,6 @@
 import path from 'node:path';
 import { defineConfig } from 'vite';
-import { globSync } from 'glob';
+import glob from 'glob';
 import eslint from '@rollup/plugin-eslint';
 import legacy from '@vitejs/plugin-legacy';
 
@@ -10,7 +10,7 @@ const sources = [`ts/${patternTS}`];
 const globs: string[] = [];
 [...sources].forEach((source) =>
   globs.push(
-    ...globSync(path.resolve(__dirname, source), {
+    ...glob.sync(path.resolve(__dirname, source), {
       ignore: ['**/__mocks__/**', '**/__tests__/**'],
     }),
   ),

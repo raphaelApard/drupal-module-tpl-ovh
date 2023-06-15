@@ -1,24 +1,26 @@
 import type { OdsBehavior } from '@websites/utils';
 
-export interface ModuleName extends OdsBehavior {
+export interface OvhAnchorAboutUs extends OdsBehavior {
   methods: {
     initialize: () => void;
   };
-  attach: (context?: HTMLElement | Document | undefined, settings?: object) => void;
+  attach: (
+    context?: HTMLElement | Document | undefined,
+    settings?: object,
+  ) => void;
 }
 
 ((Drupal, drupalSettings) => {
-  const moduleName: ModuleName = {
+  const ovhAnchorAboutUs: OvhAnchorAboutUs = {
     methods: {
       initialize: () => {
         console.log('It works!');
       },
     },
     attach() {
-      moduleName.methods.initialize();
+      ovhAnchorAboutUs.methods.initialize();
     },
-  }
+  };
 
-  Drupal.behaviors.moduleName = moduleName;
-
-} (Drupal, drupalSettings));
+  Drupal.behaviors.ovhAnchorAboutUs = ovhAnchorAboutUs;
+})(Drupal, drupalSettings);
