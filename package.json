@@ -1,0 +1,18 @@
+{
+  "name": "module_name",
+  "version": "1.0.0",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "build": "vite build --mode developement",
+    "build:prod": "vite build",
+    "ci:build": "yarn run build:prod --logLevel error",
+    "lint": "yarn common:lint --ext .js,.ts ./{js,ts}/**/*.{js,ts}",
+    "test": "yarn common:test",
+    "watch": "vite build --mode developement --watch"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^4.0.4",
+    "vite": "^4.3.9"
+  }
+}

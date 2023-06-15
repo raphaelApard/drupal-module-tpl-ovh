@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "incremental": false,
+    "isolatedModules": false,
+    "module": "ESNext",
+    "target": "es2016",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "types": [
+      "jest",
+      "node",
+      "vite/client",
+      "@websites/utils"
+    ]
+  },
+  "include": ["./ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "__mocks__",
+    "__tests__",
+    "**/*.spec.ts"
+  ]
+}
